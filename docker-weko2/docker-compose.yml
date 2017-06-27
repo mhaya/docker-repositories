@@ -1,0 +1,20 @@
+version: '2'
+services:
+  weko2:
+    build: ./weko/
+    container_name: weko2
+    ports:
+      - '127.0.0.1:8080:80'
+    environment:
+      TZ: JST-9
+    links:
+      - db
+  db:
+    build: ./db/
+    container_name: db
+    environment:
+      TZ: JST-9
+    #
+    #volumes:
+    # - ~/mysql:/var/lib/mysql
+
