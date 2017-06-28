@@ -1,17 +1,17 @@
 version: '2'
 services:
-  weko2:
-    build: ./weko2/
-    container_name: weko2
+  dspace:
+    build: ./dspace/
+    container_name: dspace
     ports:
       - '127.0.0.1:8080:80'
     environment:
       TZ: JST-9
     links:
-      - weko2db
-  weko2db:
-    build: ./weko2db/
-    container_name: weko2db
+      - dspacedb
+  dspacedb:
+    build: ./dspacedb/
+    container_name: dspacedb
     environment:
       TZ: JST-9
     #
