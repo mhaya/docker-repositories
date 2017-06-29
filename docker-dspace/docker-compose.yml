@@ -4,11 +4,13 @@ services:
     build: ./dspace/
     container_name: dspace
     ports:
-      - '127.0.0.1:8080:80'
+      - '127.0.0.1:8080:8080'
     environment:
       TZ: JST-9
     links:
       - dspacedb
+    #volumes:
+    #  - ./mavenrepo:/root/.m2/repository
   dspacedb:
     build: ./dspacedb/
     container_name: dspacedb
