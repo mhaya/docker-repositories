@@ -26,8 +26,8 @@ RUN echo "Include /opt/eprints3/cfg/apache.conf" > /etc/httpd/conf.modules.d/00p
 COPY httpd.conf /etc/httpd/conf/httpd.conf
 
 
-COPY epaadmincreate.sh /sbin/
-RUN chmod +x /sbin/epaadmincreate.sh
+#COPY epaadmincreate.sh /sbin/
+#RUN chmod +x /sbin/epaadmincreate.sh
 
 EXPOSE 80
 

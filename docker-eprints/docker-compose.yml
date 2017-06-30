@@ -7,11 +7,4 @@ services:
       - '127.0.0.1:80:80'
     environment:
       TZ: JST-9
-#    links:
-#      - eprintsdb
-#  eprintsdb:
-#    build: ./eprintsdb/
-#    container_name: eprintsdb
-#    environment:
-#      TZ: JST-9
 
