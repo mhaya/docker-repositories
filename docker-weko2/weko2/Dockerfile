@@ -9,8 +9,8 @@ COPY ./httpd.conf /etc/httpd/conf/httpd.conf
 # install yum repositories
 RUN yum install -y wget
 ## epel
-RUN wget http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
-RUN rpm -ivh epel-release-7-9.noarch.rpm
+RUN wget http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
+RUN rpm -ivh epel-release-7-10.noarch.rpm
 ## remi
 RUN wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 RUN rpm -ivh remi-release-7.rpm
@@ -46,8 +46,8 @@ RUN updatedb
 COPY ./NetCommons-2.4.2.1.tar.gz /usr/local/src/NetCommons-2.4.2.1.tar.gz
 RUN cd /usr/local/src;tar zxvf NetCommons-2.4.2.1.tar.gz
 RUN ln -s /usr/local/src/NetCommons-2.4.2.1 /var/www/nc2
-COPY ./weko2.3.4.tar.gz /usr/local/src/weko2.3.4.tar.gz
-RUN cd /usr/local/src;tar zxvf weko2.3.4.tar.gz
+COPY ./weko2.4.0.tar.gz /usr/local/src/weko2.4.0.tar.gz
+RUN cd /usr/local/src;tar zxvf weko2.4.0.tar.gz
 RUN ln -s /usr/local/src/repository /var/www/nc2/html/webapp/modules/repository
 RUN chown -R apache:apache /var/www/nc2 
 RUN chown -h apache:apache /var/www/nc2/html/webapp/modules/repository

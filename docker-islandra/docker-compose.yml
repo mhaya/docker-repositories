@@ -1,0 +1,16 @@
+version: '2'
+services:
+  islandra:
+    build: ./islandra/
+    container_name: islandra 
+    ports:
+      - '80:80'
+    environment:
+      TZ: JST-9
+  fedora:
+    build: ./fedora/
+    container_name: fedora
+    ports:
+      - '8080:8080'
+    environment:
+      TZ: JST-9
